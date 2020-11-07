@@ -46,7 +46,7 @@ You should deliver either a zip-file, or, better, a file consisting of the neces
 
 There should be a `README.md` file in the root with instructions, as well as documentation of the REST endpoints and the possible HTTP they can support. Swagger can serve as an inspiration, when it comes to documenting your API.
 
-## [Third milestone](https://github.com/adik6555/IoT-project1/tree/milestone1)
+## [Third milestone](https://github.com/adik6555/IoT-project1/tree/milestone3)
 _Note: The code quality in this milestone also has some flaws, mainly due to configuration of azure that took us a bit more time. Same thing as milestone1, think twice before copying._
 
 The purpose of this milestone is to hook up your system, through MQTT, to cloud storage.
