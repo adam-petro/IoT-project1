@@ -1,6 +1,6 @@
 
 const Gpio = require('pigpio').Gpio;
-const resources = require("../../resources").resources;
+const resources = require("../resources").resources;
 
 let frequency, interval;
 const model = resources.pi.sensors.distance;

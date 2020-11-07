@@ -21,23 +21,33 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/../public'));
 
 //Serve the root path. Index page.
-app.get('/', (req, res) => {
-    res.render('../views/pages/index');
+app.get('/', (req, res, next) => {
+    if (req.accepts()[0] === 'text/html') {
+        res.render('../views/pages/index');
+    } else {
+        res.send(resources);
+    }
 });
 
 //Root path for the pi resource
-app.get('/pi', (req, res, next) => {
-    res.body = resources.pi;
+app.get('/:deviceId', (req, res, next) => {
+    res.body = resources[req.params.deviceId];
     next();
 });
 
 //Route for the sensors
-app.use('/pi/sensors', sensorRoutes);
+app.use('/:deviceId/sensors', (req, res, next) => {
+    req.deviceId = req.params.deviceId;
+    next();
+}, sensorRoutes);
 
 //Route for the actuators
-app.use('/pi/actuators', actuatorRoutes);
+app.use('/:deviceId/actuators', (req, res, next) => {
+    req.deviceId = req.params.deviceId;
+    next();
+}, actuatorRoutes);
 
 //Apply renderer middleware
-app.use('/pi', renderer);
+app.use('/:deviceId', renderer);
 
 module.exports = app;

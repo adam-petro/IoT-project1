@@ -1,0 +1,108 @@
+{
+    "electric-sky-pi": {
+        "name": "electric-sky",
+        "description": "Pi of the electric-sky team",
+        "sensors": {
+            "cpuTemperature": {
+                "name": "CPU Temperature sensor",
+                "description": "CPU internal temperature sensor",
+                "unit": "°C",
+                "value": 0
+            },
+            "dhtTemperature": {
+                "name": "Temperature sensor",
+                "description": "An ambient temperature sensor",
+                "unit": "°C",
+                "value": 0,
+                "gpio": 12
+            },
+            "dhtHumidity": {
+                "name": "Humidity sensor",
+                "description": "An ambient humidity sensor",
+                "unit": "%",
+                "value": 0,
+                "gpio": 12
+            },
+            "distance": {
+                "name": "Distance sensor",
+                "description": "An ultrasonic distance sensor",
+                "unit": "cm",
+                "value": 0,
+                "gpioTrigger": 23,
+                "gpioEcho": 24
+            }
+        },
+        "actuators": {
+            "leds": {
+                "led1": {
+                    "name": "Red led 1",
+                    "value": false,
+                    "gpio": 4
+                },
+                "led2": {
+                    "name": "Orange led 1",
+                    "value": false,
+                    "gpio": 2
+                },
+                "led3": {
+                    "name": "Green led 1",
+                    "value": false,
+                    "gpio": 22
+                }
+            }
+        }
+    },
+    "grader-pi": {
+        "name": "electric-sky",
+        "description": "Pi of the electric-sky team",
+        "sensors": {
+            "cpuTemperature": {
+                "name": "CPU Temperature sensor",
+                "description": "CPU internal temperature sensor",
+                "unit": "°C",
+                "value": 0
+            },
+            "dhtTemperature": {
+                "name": "Temperature sensor",
+                "description": "An ambient temperature sensor",
+                "unit": "°C",
+                "value": 0,
+                "gpio": 12
+            },
+            "dhtHumidity": {
+                "name": "Humidity sensor",
+                "description": "An ambient humidity sensor",
+                "unit": "%",
+                "value": 0,
+                "gpio": 12
+            },
+            "distance": {
+                "name": "Distance sensor",
+                "description": "An ultrasonic distance sensor",
+                "unit": "cm",
+                "value": 0,
+                "gpioTrigger": 23,
+                "gpioEcho": 24
+            }
+        },
+        "actuators": {
+            "leds": {
+                "led1": {
+                    "name": "Red led 1",
+                    "value": false,
+                    "gpio": 4
+                },
+                "led2": {
+                    "name": "Orange led 1",
+                    "value": false,
+                    "gpio": 2
+                },
+                "led3": {
+                    "name": "Green led 1",
+                    "value": false,
+                    "gpio": 22
+                }
+            }
+        }
+    }
+}

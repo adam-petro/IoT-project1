@@ -16,10 +16,10 @@ exports.listen = function (server) {
             //Good optimization would be to just listen to changes on the requested resource.
             resourcesEE.on("change", (target, prop, value) => {
                 //If requested resource matches the one that was changed in the resource file
-                if (target.name && selectResource(url).name && target.name === selectResource(url).name) {
-                    ws.send(JSON.stringify(target));
-                }
-
+                // if (target.name && selectResource(url).name && target.name === selectResource(url).name) {
+                //     ws.send(JSON.stringify(target));
+                // }
+                ws.send(JSON.stringify(resources));
             })
         }
         catch (error) {

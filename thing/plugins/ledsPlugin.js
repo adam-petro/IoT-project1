@@ -1,6 +1,6 @@
 const si = require("systeminformation");
-const resources = require("../../resources").resources;
-const resourcesEE = require("../../resources").resourcesEE;
+const resources = require("../resources").resources;
+const resourcesEE = require("../resources").resourcesEE;
 
 const Gpio = require('pigpio').Gpio;
 

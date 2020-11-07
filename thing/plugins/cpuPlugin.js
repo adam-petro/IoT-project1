@@ -1,5 +1,5 @@
 const si = require("systeminformation");
-const resources = require("../../resources").resources;
+const resources = require("../resources").resources;
 
 let frequency, sensor, interval;
 const model = resources.pi.sensors.cpuTemperature;
