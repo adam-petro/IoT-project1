@@ -19,7 +19,7 @@ You should wire your components as shown on one of the last slides from the Frid
 
 The correct wiring of components
 
-![Connection schema](https://github.com/adik6555/IoT-project1/blob/main/Pi4_bb.svg?raw=true)
+![Connection schema](https://github.com/adik6555/IoT-project1/blob/master/Pi4_bb.svg?raw=true)
 
 Write a Node.js or Python server that through a Web page reports on the state of the sensors on your RPi.
 
