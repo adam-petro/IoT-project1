@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>
+            Assignment 1
+        </h1>
+    </header>
+    <section>
+        <div class="card-deck mt-4">
+            <div class="card sysinfo">
+                <img src="assets/speedometer.png" class="card-img-top sysinfo-icon" alt="cpu temp">
+                <div class="card-body">
+                    <h4 class="card-title">CPU Temp</h4>
+                    <span class="card-text">CPU temp is: </span> <span id="cpu-temp-text"></span>
+                </div>
+            </div>
+            <div class="card sysinfo">
+                <img src="assets/bulb.png" class="card-img-top sysinfo-icon" id="led-icon" alt="led">
+                <div class="card-body">
+                    <h4 class="card-title">LED</h4>
+                    <button class="btn btn-secondary" id="toggle-led">Toggle led</a>
+                </div>
+            </div>
+            <div class="card sysinfo">
+                <img src="assets/thermometer.png" class="card-img-top sysinfo-icon" alt="led">
+                <div class="card-body">
+                    <h4 class="card-title">DHT11</h4>
+                    <span class="card-text">Temperature: </span><span id="outdoor-temp-text"></span><br>
+                    <span class="card-text">Humidity: </span> <span id="outdoor-humidity-text"></span>
+                </div>
+            </div>
+
+            <div class="card sysinfo">
+                <img src="assets/radar-tracking.png" class="card-img-top sysinfo-icon" alt="radar distance">
+                <div class="card-body">
+                    <h4 class="card-title">Sonic sensor</h4>
+                    <span class="card-text">Distance measured:</span> <span id="radar-distance-text"></span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <h3>Jakub Krzyzynsky, Adam Petro, Olivier Smet</h3>
+    </footer>
+
+</body>
+
+</html>
+<script src="script.js"></script>

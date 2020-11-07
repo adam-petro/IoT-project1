@@ -1,0 +1,33 @@
+:root{
+    --main-bg-color: gray;
+    --main-font-color:black;
+    --secondary-font-color: white;
+    
+}
+
+body{
+    color:var(--main-font-color)
+}
+header{
+    width:"100%";
+    background:var(--main-bg-color);
+    color:var(--secondary-font-color);
+}
+
+footer{
+      position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background:var(--main-bg-color);
+  color: var(--secondary-font-color);
+  text-align: center;
+}
+
+.sysinfo-icon{
+    margin:1em 0 0 1em;
+    width:  100px;
+    height: 100px;
+    object-fit: scale-down;
+}
+

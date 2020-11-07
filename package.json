@@ -1,0 +1,21 @@
+{
+  "name": "assignment-1",
+  "version": "1.0.0",
+  "description": "Assignment one for the subject Building the IoT with P2P and Cloud computing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adam Petro, Olivier Smet, Jakub Krzyzynski",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-sse": "^0.5.3",
+    "pigpio": "^3.2.3",
+    "pigpio-dht": "^1.1.1",
+    "sse-express": "^2.0.2",
+    "systeminformation": "^4.27.3"
+  }
+}
