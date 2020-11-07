@@ -2,22 +2,21 @@
     --main-bg-color: gray;
     --main-font-color:black;
     --secondary-font-color: white;
-    
 }
 
-body{
-    color:var(--main-font-color)
+html,body{
+    color:var(--main-font-color);
+    height:100%;
 }
+
 header{
-    width:"100%";
+    width: 100%;
     background:var(--main-bg-color);
     color:var(--secondary-font-color);
 }
 
 footer{
-      position: fixed;
   left: 0;
-  bottom: 0;
   width: 100%;
   background:var(--main-bg-color);
   color: var(--secondary-font-color);

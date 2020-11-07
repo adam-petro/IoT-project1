@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css" type="text/css">
+    <title><%= renderData.name || renderData.key%></title>
+</head>
+
+<body>
+
+    <header>
+        <h1 style="text-align: center;">
+            Assignment 2 Human Browsable API
+        </h1>
+    </header>
+    <section class="mh=100" style="display: flex; justify-content: center; height:100%; overflow: auto;clear:both;">
+        <div class="col-md-3 col-12">
+            <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+                <div class=" card-body text-center" style="display:flex;flex-direction: column;align-items: center;">
+                    <h4 class="card-title"><%= renderData.name || renderData.key%></h4>
+                    <% if(renderData.description) { %>
+                    <h5>Description:</h5>
+                    <p class="card-text"><%=renderData.description%></p>
+                    <% }%>
+                    <% if(renderData.parentPage) { %>
+                    <h5>Parent:</h5>
+                    <p>
+                        <a class="card-text" href="<%=renderData.parentPage%>"><%=renderData.parentPage%></a>
+                        <% }%>
+                    </p>
+                    <% if((renderData.childPages).length>0) { %>
+                    <h5>Children:</h5>
+                    <p>
+                        <% renderData.childPages.forEach((child)=>{ %>
+                        <a class="card-text" href="<%=child%>">
+                            <%=child%>
+                        </a></br>
+                        <% })%>
+                    </p>
+                    <% }%>
+                    <% if(Object.keys(renderData.properties).length>0) { %>
+                    <h5>Properties:</h5>
+                    <p>
+                        <% Object.keys(renderData.properties).forEach((key)=>{ %>
+                        <b><%= key%>:</b> <%=renderData.properties[key]%> </br>
+                        <% })%>
+                    </p>
+                    <% }%>
+
+                    <% if((renderData.actions) && Object.keys(renderData.actions).length>0) { %>
+                    <h5>Actions:</h5>
+                    <p>
+                        <% renderData.actions.forEach((action)=>{ %>
+                        By sending a JSON-encoded <b><%= action['method']%></b> request to the current URL with a new
+                        value
+                        for the property
+                        <b><%= action['key'] %></b>, it will be changed.</br>
+                        <% })%>
+                    </p>
+                    <% }%>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </section>
+    <footer class="fixed-bottom">
+        <h3>Jakub Krzyzynski, Adam Petro, Olivier Smet</h3>
+    </footer>
+
+</body>

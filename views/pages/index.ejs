@@ -14,49 +14,19 @@
 
     <header>
         <h1>
-            Assignment 1
+            Assignment 2
         </h1>
     </header>
-    <section>
-        <div class="card-deck mt-4">
-            <div class="card sysinfo">
-                <img src="assets/speedometer.png" class="card-img-top sysinfo-icon" alt="cpu temp">
-                <div class="card-body">
-                    <h4 class="card-title">CPU Temp</h4>
-                    <span class="card-text">CPU temp is: </span> <span id="cpu-temp-text"></span>
-                </div>
-            </div>
-            <div class="card sysinfo">
-                <img src="assets/bulb.png" class="card-img-top sysinfo-icon" id="led-icon" alt="led">
-                <div class="card-body">
-                    <h4 class="card-title">LED</h4>
-                    <button class="btn btn-secondary" id="toggle-led">Toggle led</a>
-                </div>
-            </div>
-            <div class="card sysinfo">
-                <img src="assets/thermometer.png" class="card-img-top sysinfo-icon" alt="led">
-                <div class="card-body">
-                    <h4 class="card-title">DHT11</h4>
-                    <span class="card-text">Temperature: </span><span id="outdoor-temp-text"></span><br>
-                    <span class="card-text">Humidity: </span> <span id="outdoor-humidity-text"></span>
-                </div>
-            </div>
-
-            <div class="card sysinfo">
-                <img src="assets/radar-tracking.png" class="card-img-top sysinfo-icon" alt="radar distance">
-                <div class="card-body">
-                    <h4 class="card-title">Sonic sensor</h4>
-                    <span class="card-text">Distance measured:</span> <span id="radar-distance-text"></span>
-                </div>
-            </div>
-        </div>
+    <section id="main-section">
 
     </section>
-    <footer>
-        <h3>Jakub Krzyzynsky, Adam Petro, Olivier Smet</h3>
+    <footer class="fixed-bottom">
+        <h3>Jakub Krzyzynski, Adam Petro, Olivier Smet</h3>
     </footer>
 
 </body>
 
 </html>
-<script src="script.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js" charset="utf-8"></script>
+<script src="retrieveData.js"></script>
+<!-- <script src="script.js"></script> -->
